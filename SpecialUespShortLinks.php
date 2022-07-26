@@ -32,7 +32,7 @@ class SpecialUespShortLinks extends SpecialPage {
 				'variables' => array(),
 		);
 		
-		$this->db = new DatabaseMysql($params);
+		$this->db = Database::factory("mysql", $params);
 		
 		$this->db->selectDB($uespShortLinkDatabase);
 	}
@@ -49,7 +49,7 @@ class SpecialUespShortLinks extends SpecialPage {
 				'variables' => array(),
 		);
 		
-		$this->db = new DatabaseMysql($params);
+		$this->db = Database::factory("mysql", $params);
 		
 		$this->db->selectDB($uespShortLinkDatabase);
 	}
